@@ -1,0 +1,112 @@
+* {
+  -webkit-box-sizing: border-box;
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  overflow-x: hidden;
+  background: url("./bg.png") no-repeat;
+  background-size: cover;
+}
+
+.container {
+  width: 100%;
+  padding: 2vh 5vh;
+  margin: 0 auto;
+}
+
+
+.logo {
+  height: 100px;
+  width: 300px;
+  position: absolute;
+  z-index: 100;
+  left: 0;
+  top: 10px;
+}
+
+.wheel {
+  width: 400px;
+  height: 400px;
+  margin: 0 auto;
+  position: relative;
+}
+
+.arrow {
+  width: 50px;
+  height: 50px;
+  background-image: url('./arrow.png');
+  position: absolute;
+  left: 180px;
+  z-index: 100;
+}
+
+.inside {
+  height: 400px;
+  width: 400px;
+  background-image: url('./image.png');
+  background-position: center;
+  background-size: contain;
+  border-radius: 100%;
+  position: absolute;
+  cursor: pointer;
+}
+
+.varian {
+  transition: transform 3s cubic-bezier(0, .8, .51, .87);
+    -moz-transform: rotate(1410.5deg);
+    -ms-transform: rotate(1410.5deg);
+    -webkit-transform: rotate(1410.5deg);
+    -o-transform: rotate(1410.5deg);
+    transform: rotate(1410.5deg);
+}
+
+.play {
+  position: absolute;
+  background-image: url("./play.png");
+  background-size: contain;
+  background-position: center;
+  background-repeat: no-repeat;
+  background-color: transparent;
+  border: none;
+  outline: none;
+  top: 20vh;
+  left: 22vh;
+  width: 18.5vh;
+  height: 18.5vh;
+  cursor: pointer;
+  z-index: 150;
+  animation: 2s linear 1s infinite running sliding;
+  transform: scale(1);
+  filter: none;
+}
+
+@keyframes sliding {
+
+  0%,
+  100% {
+    transform: scale(1);
+    filter: drop-shadow(0 0 4vh rgba(0, 0, 0, 0.5));
+  }
+
+  70% {
+    transform: scale(.95);
+    filter: drop-shadow(0 0 4vh rgba(0, 0, 0, 0.5));
+    filter: none;
+  }
+}
+
+.cleopatra {
+  background-image: url('cleopatra.png');
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: contain;
+  position: absolute;
+  z-index: 10;
+  left: 0;
+  bottom: 0;
+  top: 300px;
+  right: 0;
+}
